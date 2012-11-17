@@ -37,6 +37,7 @@ Bundle 'FuzzyFinder'
 Bundle 'ScrollColors'
 Bundle 'MultipleSearch'
 Bundle 'SuperTab'
+Bundle 'NERDTree'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
