@@ -1,16 +1,26 @@
-
+set hlsearch
+set autoindent
+set nowrap
+set number
 syntax on
 colorscheme leo 
-map <C-n> :NERDTreeToggle<Enter>
 set number
+map <C-n> :NERDTreeToggle<Enter>
 map <C-b> :set invnumber<Enter>
+map <C-h> :TMToggle<Enter>
 set t_Co=256
-set hlsearch
+let g:tabman_side = 'right'
+let g:tabman_width=40
 set expandtab
 set tabstop=2
 set shiftwidth=2
-
-
+set showmode            " show mode at bottom of screen
+set showmatch
+set mat=5               " show matching brackets for 0.5 seconds
+set clipboard+=unnamed  " yank and copy to X clipboard
+set guitablabel=%t
+let g:rsenseHome = "/opt/rsense-0.3"
+let g:rsenseUseOmniFunc = 1
 set nocompatible
 filetype off                   " required!
 
@@ -43,3 +53,4 @@ Bundle 'git://git.wincent.com/command-t.git'
 " ...
 
 filetype plugin indent on     " required!
+
