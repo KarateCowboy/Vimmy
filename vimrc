@@ -41,6 +41,7 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'pangloss/vim-javascript'
 Bundle 'thomd/vim-jasmine.git'
 Bundle 'vim-scripts/grep.vim.git'
+Bundle 'luisgabriel/vim-qml'
  " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
