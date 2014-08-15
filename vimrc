@@ -9,6 +9,7 @@ map <C-n> :NERDTreeToggle<Enter>
 map <C-b> :set invnumber<Enter>
 map <C-h> :TMToggle<Enter>
 map <C-s> :Tablisttoggle<Enter>
+map <Leader>s :Search<Space>
 set t_Co=256
 let g:tabman_side = 'right'
 let g:tabman_width=40
