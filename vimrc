@@ -59,6 +59,7 @@ Bundle 'vim-scripts/Colour-Sampler-Pack'
 Bundle 'slim-template/vim-slim.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'wavded/vim-stylus'
+Bundle 'mustache/vim-mustache-handlebars'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -69,5 +70,5 @@ Bundle 'SuperTab'
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
 
-colorscheme leo
+colorscheme wombat256
 filetype plugin indent on " required!
