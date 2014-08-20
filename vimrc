@@ -15,7 +15,7 @@ let g:tabman_side = 'right'
 let g:tabman_width=40
 set expandtab
 set tabstop=2
-set guifont=Terminus\ 14
+set guifont=Ubuntu\ Mono\ 10
 set shiftwidth=2
 set showmode " show mode at bottom of screen
 set showmatch
@@ -61,12 +61,13 @@ Bundle 'slim-template/vim-slim.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'wavded/vim-stylus'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'valloric/YouCompleteMe'
+Bundle 'KurtPreston/vim-autoformat-rails'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'ScrollColors'
 Bundle 'MultipleSearch'
-Bundle 'SuperTab'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
