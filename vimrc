@@ -45,6 +45,7 @@ Plugin 'VundleVim/Vundle.vim'
 " My Bundles here:
 "
 " original repos on github
+Plugin 'flazz/vim-colorschemes'
 Bundle 'dag/vim-fish.git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
@@ -64,6 +65,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'valloric/YouCompleteMe'
 Bundle 'KurtPreston/vim-autoformat-rails'
+Bundle 'scrooloose/nerdtree'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
