@@ -65,6 +65,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'valloric/YouCompleteMe'
 Bundle 'KurtPreston/vim-autoformat-rails'
+Bundle 'digitaltoad/vim-jade'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
