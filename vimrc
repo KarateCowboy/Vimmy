@@ -46,6 +46,7 @@ Plugin 'VundleVim/Vundle.vim'
 "
 " original repos on github
 Plugin 'flazz/vim-colorschemes'
+Bundle 'scrooloose/nerdtree'
 Bundle 'dag/vim-fish.git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
@@ -60,12 +61,10 @@ Bundle 'vim-scripts/grep.vim.git'
 Bundle 'luisgabriel/vim-qml'
 Bundle 'vim-scripts/Colour-Sampler-Pack'
 Bundle 'slim-template/vim-slim.git'
-Bundle 'scrooloose/nerdtree'
 Bundle 'wavded/vim-stylus'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'valloric/YouCompleteMe'
 Bundle 'KurtPreston/vim-autoformat-rails'
-Bundle 'scrooloose/nerdtree'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -74,6 +73,7 @@ Bundle 'MultipleSearch'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
+call vundle#end()
 
 colorscheme wombat256
 filetype plugin indent on " required!
