@@ -2,7 +2,6 @@ set hlsearch
 set autoindent
 set nowrap
 set number
-syntax on
 set shell=/bin/bash
 set number
 map <C-n> :NERDTreeToggle<Enter>
@@ -11,9 +10,11 @@ map <C-h> :TMToggle<Enter>
 map <C-s> :Tablisttoggle<Enter>
 map <Leader>s :Search<Space>
 set t_Co=256
+syntax on
 let g:tabman_side = 'right'
 let g:tabman_width=40
 set expandtab
+set cursorline
 set tabstop=2
 set guifont=Ubuntu\ Mono\ 10
 set shiftwidth=2
@@ -21,6 +22,7 @@ set showmode " show mode at bottom of screen
 set showmatch
 set mat=5 " show matching brackets for 0.5 seconds
 set clipboard+=unnamed " yank and copy to X clipboard
+let  g:solarized_style     =   "dark" 
 set guitablabel=%t
 let g:rsenseHome = "/opt/rsense-0.3"
 let g:rsenseUseOmniFunc = 1
@@ -76,5 +78,5 @@ Bundle 'git://git.wincent.com/command-t.git'
 " ...
 call vundle#end()
 
-colorscheme wombat256
+colorscheme solarized
 filetype plugin indent on " required!
