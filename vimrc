@@ -73,10 +73,11 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'ScrollColors'
 Bundle 'MultipleSearch'
+Bundle 'kchmck/vim-coffee-script'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
 call vundle#end()
 
-colorscheme solarized
-filetype plugin indent on " required!
+colorscheme molokai
+
