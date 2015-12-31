@@ -80,4 +80,5 @@ Bundle 'git://git.wincent.com/command-t.git'
 call vundle#end()
 
 colorscheme molokai
+"autocmd BufWritePost *.coffee !coffee -c %   
 
