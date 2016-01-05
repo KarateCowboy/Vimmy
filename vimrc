@@ -16,7 +16,7 @@ let g:tabman_width=40
 set expandtab
 set cursorline
 set tabstop=2
-set guifont=Ubuntu\ Mono\ 10
+set guifont=Monospace\ 10
 set shiftwidth=2
 set showmode " show mode at bottom of screen
 set showmatch
@@ -80,5 +80,5 @@ Bundle 'git://git.wincent.com/command-t.git'
 call vundle#end()
 
 colorscheme molokai
-"autocmd BufWritePost *.coffee !coffee -c %   
+autocmd BufWritePost *.coffee !coffee --no-header -bc %
 
