@@ -4,11 +4,14 @@ set nowrap
 set number
 set shell=/bin/bash
 set number
+let maplocalleader = "\\"
+let mapleader = "-"
 map <C-n> :NERDTreeToggle<Enter>
 map <C-b> :set invnumber<Enter>
 map <C-h> :TMToggle<Enter>
 map <C-s> :Tablisttoggle<Enter>
 map <Leader>s :Search<Space>
+map <leader>c :!js2coffee --compat % > %.coffee<Enter>
 set t_Co=256
 syntax on
 let g:tabman_side = 'right'
