@@ -11,7 +11,7 @@ map <C-b> :set invnumber<Enter>
 map <C-h> :TMToggle<Enter>
 map <C-s> :Tablisttoggle<Enter>
 map <Leader>s :Search<Space>
-map <leader>c :!js2coffee --compat % > %.coffee<Enter>
+map <leader>c :!js2coffee --compat % > %.coffee && rename 's/js\.//g' %.coffee<Enter>
 set t_Co=256
 syntax on
 let g:tabman_side = 'right'
@@ -83,5 +83,5 @@ Bundle 'git://git.wincent.com/command-t.git'
 call vundle#end()
 
 colorscheme molokai
-autocmd BufWritePost *.coffee !coffee --no-header -bc %
+autocmd BufWritePost *.coffee !coffee -bc %
 
