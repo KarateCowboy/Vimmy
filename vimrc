@@ -82,6 +82,6 @@ Bundle 'git://git.wincent.com/command-t.git'
 " ...
 call vundle#end()
 
-colorscheme mopkai
+colorscheme morning
 autocmd BufWritePost *.coffee !coffee --no-header -bc %
 
