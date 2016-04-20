@@ -17,6 +17,7 @@ syntax on
 let g:tabman_side = 'right'
 let g:tabman_width=40
 set expandtab
+map <c-f> :call JsBeautify()<cr>
 set cursorline
 set tabstop=2
 set guifont=Monospace\ 10
@@ -63,7 +64,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'thomd/vim-jasmine.git'
 Bundle 'vim-scripts/grep.vim.git'
-Bundle 'luisgabriel/vim-qml'
 Bundle 'vim-scripts/Colour-Sampler-Pack'
 Bundle 'slim-template/vim-slim.git'
 Bundle 'wavded/vim-stylus'
@@ -77,11 +77,14 @@ Bundle 'FuzzyFinder'
 Bundle 'ScrollColors'
 Bundle 'MultipleSearch'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'maksimr/vim-jsbeautify', { 'do' : 'git submodule update --init --recursive' }
+Bundle 'elzr/vim-json'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'marijnh/tern_for_vim', { 'do' : 'npm install' }
 " ...
 call vundle#end()
 
-colorscheme morning
+colorscheme molokai
 autocmd BufWritePost *.coffee !coffee --no-header -bc %
 
