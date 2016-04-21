@@ -19,6 +19,7 @@ let g:tabman_width=40
 set expandtab
 map <c-f> :call JsBeautify()<cr>
 set cursorline
+set cursorcolumn
 set tabstop=2
 set guifont=Monospace\ 10
 set shiftwidth=2
