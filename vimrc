@@ -83,9 +83,18 @@ Bundle 'elzr/vim-json'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'marijnh/tern_for_vim', { 'do' : 'npm install' }
+Plugin 'jeetsukumaran/vim-buffergator'
 " ...
 call vundle#end()
+highlight Cursor guifg=green guibg=black
+highlight iCursor guifg=green guibg=black
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor-=i:blinkon0
 
 colorscheme molokai
+"set background=light
+"colorscheme molokai
 autocmd BufWritePost *.coffee !coffee --no-header -bc %
 
