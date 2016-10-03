@@ -6,11 +6,14 @@ set shell=/bin/bash
 set number
 let maplocalleader = "\\"
 let mapleader = "-"
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+let g:python_host_prog = '/usr/bin/python'
 map <C-n> :NERDTreeToggle<Enter>
 map <C-b> :set invnumber<Enter>
 map <C-h> :TMToggle<Enter>
 map <C-s> :Tablisttoggle<Enter>
 map <Leader>s :Search<Space>
+map <Leader>e :CtrlPMRUFiles<Enter>
 map <leader>c :!js2coffee % > %.coffee && rename -f 's/js\.//g' %.coffee<Enter>
 set t_Co=256
 syntax on
@@ -21,7 +24,8 @@ map <c-f> :call JsBeautify()<cr>
 set cursorline
 set cursorcolumn
 set tabstop=2
-set guifont=Monospace\ 10
+"set guifont=Ubuntu\ Mono\ 12
+set guifont=Terminus\ \(TTF\)\ 12
 set shiftwidth=2
 set showmode " show mode at bottom of screen
 set showmatch
@@ -67,9 +71,10 @@ Bundle 'thomd/vim-jasmine.git'
 Bundle 'vim-scripts/grep.vim.git'
 Bundle 'vim-scripts/Colour-Sampler-Pack'
 Bundle 'slim-template/vim-slim.git'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'wavded/vim-stylus'
 Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'valloric/YouCompleteMe'
+"Bundle 'valloric/YouCompleteMe'
 Bundle 'KurtPreston/vim-autoformat-rails'
 Bundle 'digitaltoad/vim-jade'
 " vim-scripts repos
@@ -93,8 +98,10 @@ set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon0
 set guicursor-=i:blinkon0
 
-colorscheme molokai
-"set background=light
 "colorscheme molokai
+colorscheme molokai_dark
+"set background=dark
+"colorscheme solarized
+"colorscheme thor
 autocmd BufWritePost *.coffee !coffee --no-header -bc %
 
