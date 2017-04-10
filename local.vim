@@ -4,9 +4,9 @@ set ignorecase
 map <C-p> :CtrlP
 set nowrap
 let g:lucius_style="light"
-colorscheme molokai_dark
+colorscheme seti
 set tabstop=2
-set cursorcolumn
+set nocursorcolumn
 set nocursorline
 set hidden
 map <Leader>b :bprevious <Enter>
@@ -25,4 +25,5 @@ set guicursor-=i:blinkon0
 "Plug 'jonathanfilip/vim-lucius'
 "Plug 'vim-scripts/summerfruit256.vim'
 "Plug 'digitaltoad/vim-pug'
-
+"Plug 'trusktr/seti.vim'
+"Plug 'vim-scripts/summerfruit.vim'
