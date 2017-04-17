@@ -4,7 +4,7 @@ set ignorecase
 map <C-p> :CtrlP
 set nowrap
 let g:lucius_style="light"
-colorscheme seti
+colorscheme molokai
 set tabstop=2
 set nocursorcolumn
 set nocursorline
