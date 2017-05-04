@@ -2,6 +2,7 @@ set hlsearch
 set autoindent
 set nowrap
 set number
+set ignorecase
 set shell=/bin/bash
 set number
 let maplocalleader = "\\"
@@ -74,7 +75,7 @@ Bundle 'slim-template/vim-slim.git'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'wavded/vim-stylus'
 Bundle 'mustache/vim-mustache-handlebars'
-"Bundle 'valloric/YouCompleteMe'
+Bundle 'valloric/YouCompleteMe'
 Bundle 'KurtPreston/vim-autoformat-rails'
 Bundle 'digitaltoad/vim-jade'
 " vim-scripts repos
@@ -103,5 +104,5 @@ colorscheme molokai_dark
 "set background=dark
 "colorscheme solarized
 "colorscheme thor
-autocmd BufWritePost *.coffee !coffee --no-header -bc %
+"autocmd BufWritePost *.coffee !coffee --no-header -bc %
 
