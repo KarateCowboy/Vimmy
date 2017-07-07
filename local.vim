@@ -63,7 +63,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'vim-scripts/summerfruit.vim'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
-colorscheme borland
+colorscheme softbluev2
 
 " [> Airline <]
 
