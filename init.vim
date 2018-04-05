@@ -6,7 +6,7 @@ call plug#begin($HOME.'/.config/nvim/plugins/plugged')
 Plug 'Valloric/YouCompleteMe'
 Plug 'digitaltoad/vim-pug'
 Plug 'rust-lang/rust.vim'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-dist/PaperColor.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -32,8 +32,9 @@ Plug 'trusktr/seti.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'vim-scripts/summerfruit.vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/MultipleSearch'
 call plug#end()
-colorscheme molokai_dark
+colorscheme cobalt2
 
 " [> Airline <]
 
@@ -41,8 +42,6 @@ colorscheme molokai_dark
 set laststatus=2
 
 let g:airline#extensions#tabline#enabled = 1
-
-let g:airline_theme='monokai'
 
 " [> NERDTree <]
 
@@ -75,6 +74,7 @@ set hidden
 map <Leader>b :bprevious <Enter>
 map <Leader>n :bnext <Enter>
 map <Leader>t :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<Enter>
 set guifont=Terminus\ \(TTF\)\ 12
 set shiftwidth=2
 highlight Cursor guifg=green guibg=black
