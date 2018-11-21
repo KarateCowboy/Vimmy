@@ -19,17 +19,17 @@ Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'Chiel92/vim-autoformat'
 call plug#end()
-colorscheme summerfruit256
+colorscheme cobalt2
 
 let g:airline_theme='cobalt2'
 
 autocmd BufWritePost *.coffee !coffee --no-header -bc %
 let g:ale_linters = {
-\   'javascript': ['standard'],
-\}
+      \   'javascript': ['standard'],
+      \}
 let g:ale_fixers = {'javascript': ['standard']}
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 
 syntax on
-au BufWrite * :Autoformat
+noremap <Leader>f :Autoformat<CR>
