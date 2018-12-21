@@ -1,7 +1,12 @@
-let g:vimDir = $HOME.'/.vim'
-set expandtab
+let g:vimDir = $HOME.'/.config/nvim'
+filetype plugin indent on
 set tabstop=2
+set shiftwidth=2
+set expandtab
 set number
+set autoindent
+set t_Co=256
+filetype indent on
 
 call plug#begin($HOME.'/.vim/plugins/plugged')
 Plug 'kien/ctrlp.vim'
