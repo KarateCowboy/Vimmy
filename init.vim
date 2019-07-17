@@ -1,4 +1,3 @@
-let g:vimDir = $HOME.'/.config/nvim'
 filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
@@ -19,21 +18,16 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
-Plug 'vim-scripts/darktango.vim'
 "Plug 'vim-scripts/AutoComplPop'
 Plug 'fatih/molokai'
 Plug 'nightsense/rusticated'
 Plug 'vim-scripts/grep.vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'nightsense/cosmic_latte'
-Plug 'lmintmate/blue-mood-vim'
 Plug 'tpope/vim-endwise'
 Plug 'ervandew/supertab'
-Plug 'vim-scripts/ScrollColors'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'luochen1990/rainbow'
 Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim'
+Plug 'hzchirs/vim-material'
+Plug 'w0rp/ale'
 call plug#end()
 let g:deoplete#enable_at_startup = 1
 "colorscheme  summerfruit256
@@ -41,8 +35,9 @@ let g:deoplete#enable_at_startup = 1
 "colorscheme cobalt2
 "colorscheme PaperColor
 "colorscheme solarized8_light_flat
-colorscheme afterglow
-"set background=light
+let g:material_style='palenight'
+colorscheme vim-material
+set background=dark
 "colorscheme blue-mood
 "formatting
 syntax on
@@ -60,7 +55,10 @@ set guifont=Terminus\ (TTF)\ 16
 noremap <Leader>f :Autoformat<CR>
 noremap <Leader>t :NERDTreeToggle <Enter>
 
-let g:airline_theme='blue-mood'
+let g:airline_theme='material'
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+
 let g:rainbow_active = 1
 
 "keybindings
@@ -89,3 +87,17 @@ let g:autoformat_remove_trailing_spaces=0
 let g:solarized_degrade=1
 let g:rainbow_active = 1
 set hidden
+
+let g:ale_linters = {
+      \   'javascript': ['standard'],
+      \}
+let g:ale_fixers = {'javascript': ['standard']}
+
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+
+"for truecolor support
+set t_8f=^[[38;2;%lu;%lu;%lum
+set t_8b=^[[48;2;%lu;%lu;%lum
+colorscheme vim-material
+set termguicolors
