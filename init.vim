@@ -28,6 +28,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim'
 Plug 'hzchirs/vim-material'
 Plug 'w0rp/ale'
+Plug 'gertjanreynaert/cobalt2-vim-theme'
 call plug#end()
 let g:deoplete#enable_at_startup = 1
 "colorscheme  summerfruit256
