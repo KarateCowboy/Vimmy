@@ -48,7 +48,6 @@ set shiftwidth=2
 set expandtab
 set number
 set autoindent
-set cursorline
 filetype indent on
 set hlsearch
 
@@ -100,5 +99,5 @@ let g:ale_fix_on_save = 1
 "for truecolor support
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
-colorscheme vim-material
+colorscheme cobalt2 
 set termguicolors
