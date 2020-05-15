@@ -33,12 +33,12 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 "colorscheme  summerfruit256
 "colorscheme dracula
-"colorscheme cobalt2
+colorscheme cobalt2
 "colorscheme PaperColor
 "colorscheme solarized8_light_flat
-let g:material_style='palenight'
-colorscheme vim-material
-set background=dark
+"let g:material_style='palenight'
+"colorscheme vim-material
+"set background=dark
 "colorscheme blue-mood
 "formatting
 syntax on
@@ -56,7 +56,7 @@ set guifont=Terminus\ (TTF)\ 16
 noremap <Leader>f :Autoformat<CR>
 noremap <Leader>t :NERDTreeToggle <Enter>
 
-let g:airline_theme='material'
+let g:airline_theme='cobalt2'
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
@@ -100,5 +100,4 @@ let g:ale_fix_on_save = 1
 "for truecolor support
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
-colorscheme vim-material
-set termguicolors
+"set termguicolors
