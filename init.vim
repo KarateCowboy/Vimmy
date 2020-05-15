@@ -2,7 +2,6 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set number
 set autoindent
 filetype indent on
 
@@ -48,7 +47,6 @@ set shiftwidth=2
 set expandtab
 set number
 set autoindent
-set cursorline
 filetype indent on
 set hlsearch
 
@@ -101,3 +99,5 @@ let g:ale_fix_on_save = 1
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
 "set termguicolors
+colorscheme cobalt2 
+set termguicolors
