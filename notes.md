@@ -1,14 +1,14 @@
 # Tech notes
 
-## Languages 
+## Languages
 
-###  Purescript
+### Purescript
 
  Typed programs -> correct programs
  Cannot be typed -> incorrect programs
 
- - types only exist at compile time
- - different from types in C# or Java
+- types only exist at compile time
+- different from types in C# or Java
 
 *TIP:* Use `-O` flag on transpilation to eliminate dead code
 
@@ -16,11 +16,11 @@
 
 - every module gets turned into an object
 
-#### Types
+#### PureScript Types
 
-- *universally quantified* `forall` in parameters means you can use any type and the function will work with it. eg.:
+- *universally quantified* `forall` is not a for loop. in parameters means you can use any type and the function will work with it. eg.:
 
-```
+```purescript
 flip forall a b c. (a -> b -> c) -> b -> a -> c
 ```
 
@@ -33,3 +33,141 @@ Data has a type, a type has a kind
 #### REPL
 
 `:paste` for multi-line instructions
+
+#### Semantics and Constructs
+
+```purescript
+findEntry :: String -> String -> AddressBook -> Maybe Entry
+findEntry firstName lastName book = head $ filter filterEntry book
+  where
+    filterEntry :: Entry -> Boolean
+    filterEntry entry = entry.firstName == firstName && entry.lastName == lastName
+```
+
+`filterEntry` is an example of an auxiliary declaration in the prior case.
+
+#### Functions & Function Types
+
+an *infix* function is denoted by the infix symbol `$`, which is an alias for `apply`
+
+the PureScript function composition function is `<<<` eg
+
+```purescript
+sayHello x = "hello, " <> x
+askHowAreYou y = y <> ". How do you do?"
+
+greet = sayHello >>> askHowAreYou
+greet "matthew"
+"hello, matthew. How do you do?"
+```
+
+Backwards composition: `<<<`. Forwards composition: `>>>`
+
+anonymous functions use the *lambda* syntax: `(\n -> n <> "[xxxx[=======================>")`
+
+#### chapter 4: recursion, maps, folds
+
+*functors*?
+
+### Haskell
+
+A *type synonym* is introduced using `type`. eg
+
+```haskell
+type ShoeSize = Int
+```
+
+`ShoeSize` may be used wherever `Int` is mentioned. `type` does not actually introduce a new type. It introduces a new name for an existing type. So `type NameAge = (String, Int)` just means `(String, Int)`.
+
+#### Haskell Types
+
+lists may be declared in a few ways. One is literal and explicit:
+
+`[1,2,3,4,5,7,10]`
+
+Range syntax:
+
+`[1..10]`
+
+Step-range syntax:
+
+`[1,3..10]` will produce `[1,3,5,7,9]`
+
+Infinite list, starting with 1:
+
+`[1..]`
+
+A tuple may be heterogeneous. They may also contain other tuples as well as lists and other complex types.
+
+#### Haskell functions
+
+`fold` is the same as JavaScript's `reduce`
+
+[Parametric polymorphism](https://en.wikipedia.org/wiki/Parametric_polymorphism)
+
+> In programming languages and type theory, parametric polymorphism is a way to make a language more expressive, while still maintaining full static type-safety. Using parametric polymorphism, a function or a data type can be written generically so that it can handle values identically without depending on their type.[1] Such functions and data types are called generic functions and generic datatypes respectively and form the basis of generic programming.
+
+## Software
+
+### Nix and Ilk
+
+main command for package management is `nix-env`. It allows you to:
+
+- install `-i`
+- upgrade `-u`
+- erase `-e`
+- query `-q`
+
+...packages
+
+#### Ideas
+
+##### Views
+
+Different users have different *views* of software installed on the system. Users have a selection of *active* packages from the installed list. These *active* packages appear in the users's `PATH`. Also called a *user environment*.
+
+
+##### Generations
+
+Every time an operation is executed then a new user environment is created, based on the prior. This is called a *generation*.
+
+```bash
+nix-env --list-generations
+nix-env --rollback
+nix-env --switch-generation 43
+```
+
+remove old generations like:
+
+```bash
+nix-env --delete-generations old
+nix-env --delete-generations 10 11 12
+nix-env --delete-generations 14d
+```
+
+then
+
+```bash
+nix-store --gc
+```
+
+##### Channels
+
+add a channel:
+```bash
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+```
+
+update the lastest info for a channel:
+`nix-channel --update`
+
+#### Commands
+
+* `nix-env -qa` show available packages, `-qa` being `query` and `available`.
+  * add `s` for installation status 
+* Dry run an operation with `--dry-run` flag
+
+
+##### Expressions
+
+
