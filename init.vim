@@ -28,6 +28,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'hzchirs/vim-material'
 Plug 'w0rp/ale'
 Plug 'gertjanreynaert/cobalt2-vim-theme'
+Plug 'reasonml-editor/vim-reason-plus'
 call plug#end()
 let g:deoplete#enable_at_startup = 1
 "colorscheme  summerfruit256
@@ -68,22 +69,10 @@ noremap <Leader>q :Bdelet<CR>
 "transpiling
 autocmd BufWritePost *.coffee !coffee --no-header -bc %
 autocmd BufWritePost *.pug !pug %
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_javascript_checkers = ['standard']
-"let g:syntastic_javascript_standard_exec = 'standard'
-"let g:syntastic_javascript_standard_generic = 1
 
 let g:autoformat_autoindent=0
 let g:autoformat_retab=0
 let g:autoformat_remove_trailing_spaces=0
-let g:solarized_degrade=1
 let g:rainbow_active = 1
 set hidden
 
@@ -100,4 +89,3 @@ set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
 "set termguicolors
 colorscheme cobalt2 
-set termguicolors
