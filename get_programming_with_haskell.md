@@ -23,6 +23,8 @@ data Sex = Male | Female
 
 `Sex` is the *type constructor*. `Male` and `Female` are *data constructors*.
 
+`newtype` is a preferred way of creating new types. But, is more strict than `data`. 
+
 With *records* you don’t have to write your getters; each field in the record syntax automatically creates an *accessor* function to access that value from the record
 
 Update record values by 'passing' a rew record to the instance, with just the new values set, eg:
@@ -63,3 +65,17 @@ instance Show Weapon where
   show Sword = "[xxxx{;;;;;;;;;;;;;;;;;;;;;;;>"
   show Knife = "oxx[=====>"
 ```
+
+In functional programming, *polymorphism* means the same function behaves differently depending upon which data type it is using.
+
+Use Hoogle to find definitions of type classes
+
+```haskell
+data Ordering = LT | EQ | GT
+```
+
+Use `deriving` for `Show`, `Ord`, and `Eq` when possible
+
+`Enum` is a very useful time. It's an enumerated list of constants
+
+Enumerated types can be generated as lists. Eg `[S3 .. S6]`

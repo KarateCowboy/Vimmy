@@ -31,6 +31,8 @@ Plug 'gertjanreynaert/cobalt2-vim-theme'
 Plug 'reasonml-editor/vim-reason-plus'
 call plug#end()
 let g:deoplete#enable_at_startup = 1
+"pip3 install --user pynvim --- for deoplete
+"
 "colorscheme  summerfruit256
 "colorscheme dracula
 colorscheme cobalt2
