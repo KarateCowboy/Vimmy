@@ -79,3 +79,9 @@ Use `deriving` for `Show`, `Ord`, and `Eq` when possible
 `Enum` is a very useful time. It's an enumerated list of constants
 
 Enumerated types can be generated as lists. Eg `[S3 .. S6]`
+
+## Chapter 16 - Programming in Types
+
+*Product types* are created by combining two or more existing types with and
+
+*sum types* are created by combining types using or. They can be used to have one type represent dramatically different implementations.
