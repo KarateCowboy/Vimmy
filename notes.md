@@ -69,6 +69,25 @@ anonymous functions use the *lambda* syntax: `(\n -> n <> "[xxxx[===============
 
 *functors*?
 
+
+#### Halogen
+
+##### Components
+
+- Types
+  - Input
+      - may come from a parent or the root of the app
+      - should be described by a type, eg
+```
+  type Input = FancyApplicationInput { ...
+```
+      - use type `Unit` if your input is dispolable junk
+  - State
+      all components require `initialState` which creates a state from an `Input` value
+      `initialState :: Input -> State`
+  - Actions
+      actions are events
+- Rendering
 ### Haskell
 
 A *type synonym* is introduced using `type`. eg
