@@ -190,3 +190,59 @@ update the lastest info for a channel:
 ##### Expressions
 
 
+### Rust 
+
+#### The book
+
+##### Chapter 4 Understanding Ownership
+
+data is stack based and heap based. Scalars are on the stack. More complex types are on the heap. 
+
+data may be:
+
+ - moved
+ - copied
+ - borrowed
+ - sliced (stores a ref to the first element and a length)
+
+String literals `&str` are literally part of the binary. They are immutable.
+
+##### Chapter 5 Using Structs to Structure Related Data
+
+- may contain mixed types
+- must be entirely mutable or immutable
+
+    *field init shorthand* lets is like the thing is JS where you can just have a variable that matches the field name
+
+```rust
+fn build_user(email: String, username: String) -> User {
+    User {
+        email,
+        username,
+        active: true,
+        sign_in_count: 1,
+    }
+}
+```
+
+   *struct update syntax* lets you create new structs from old tersely and in an immutable fashion.
+
+```rust
+    let user2 = User {
+        email: String::from("another@example.com"),
+        username: String::from("anotherusername567"),
+        ..user1
+    };
+```
+
+Printing structs requires deriving a trait such asd `Debug` or implementing the `Display` trait
+
+Methods are defined within the context of a struct and always have the first parameter of  `&self`
+
+##### Chapter 6 Enums and Pattern Matching
+
+Enums make have other enums, Strings, numbers, or structs as their types.
+
+`Option<T>` enum has `Some(T)` or `None`
+
+`match` has `_ =>` as equivalent of Haskell's `otherwise`.
