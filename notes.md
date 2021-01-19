@@ -246,3 +246,94 @@ Enums make have other enums, Strings, numbers, or structs as their types.
 `Option<T>` enum has `Some(T)` or `None`
 
 `match` has `_ =>` as equivalent of Haskell's `otherwise`.
+
+### Kotlin
+
+#### Functional Programming with Kotlin
+
+##### Chapter 2
+
+###### recollect:
+
+- `tailrec` to make the compiler optimize recursion
+- lambda syntax comes in two forms:
+
+```kotlin
+  val firstL = { i: Int -> i + 1}
+  val someLambda = fun (i: Int) : Int { return i + 1 }
+  val itLambda = { it + 1 }
+```
+
+- pattern matching via `when` blocks:
+
+```kotlin
+var i = 3
+var word = when {
+  i == 3 -> "Three",
+  i == 4 -> "Four",
+  i == 5 -> "Five",
+  else -> "Many"
+}
+```
+
+- function typing:
+
+```kotlin
+fun <A,B,C> (a: A, b: B, c: C) : String { a.toString() + " " + b.toString() + " " + c.toString() }`
+```
+
+- compose functions with `compose()`
+- curry functions with `curry()`
+
+###### things i forgot
+
+- recursive lambdas are idiomatically called `go` or `loop`
+- function parameters are similar to Haskell:
+
+```
+  fun applyToInt( i: Int, f: (Int) -> Int) : Int
+```
+
+polymorphic/generic function literals take the type parameters between `fun` and the function name, eg:
+
+```kotlin
+  fun <A,B,C> listNameAndAge (name: A, age: B) : C {
+     // do some work
+  }
+```
+
+passing named functions literally:
+
+```
+f = applyAbs(i: Int, ::abs)
+```
+
+##### Chapter 3
+
+The most ubiquitous functional data structure is the *singly linked list*
+
+###### 3.1
+
+- `sealed` classes require all instance definitions to be present within that file
+- `out` is a variance marker. it means you have these things called covariants
+- to create data constructors use `data class`
+- `Nothing` is a subtype of all other types
+- `Nil` can be anything
+
+###### 3.2
+
+- smartcast
+- when / is : with `is` matching on type
+- companion object is a singleton
+- no static methods
+- variadic functions take multiple arguments. `vararg`
+- `*` is the array deconstruction operator
+- `until` keyword
+- `of` factory function on a companion object is idiomatic
+
+###### 3.3
+
+- pessimistic copying in other languages is necessary because of the possiblity that data might be mutated
+- data sharing makes programs more efficient
+
+###### 3.4

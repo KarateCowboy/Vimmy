@@ -3,6 +3,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
+set nowrap
 filetype indent on
 
 call plug#begin($HOME.'/.config/nvim/plugins/plugged')
@@ -32,17 +33,7 @@ Plug 'reasonml-editor/vim-reason-plus'
 call plug#end()
 let g:deoplete#enable_at_startup = 1
 "pip3 install --user pynvim --- for deoplete
-"
-"colorscheme  summerfruit256
-"colorscheme dracula
 colorscheme cobalt2
-"colorscheme PaperColor
-"colorscheme solarized8_light_flat
-"let g:material_style='palenight'
-"colorscheme vim-material
-"set background=dark
-"colorscheme blue-mood
-"formatting
 syntax on
 filetype plugin indent on
 set tabstop=2
