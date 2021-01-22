@@ -336,4 +336,31 @@ The most ubiquitous functional data structure is the *singly linked list*
 - pessimistic copying in other languages is necessary because of the possiblity that data might be mutated
 - data sharing makes programs more efficient
 
-###### 3.4
+#### Kotlin in Action
+
+##### Chapter 2 Kotlin basics
+
+- `val` is immutable `var` is mutable
+   immutable values can be declared and then later initialized. however the type must be specified
+- class visibility is pubilc by default, much like JavaScript
+  
+`if` is an expression rather than a statement. Unlike a statement it has a value. Most control structures are. 
+  Exceptions include `for`, `do`, `do/while`
+
+  functions can have 'block body' or 'expression body'
+
+  string templates may interpolate variables using `$variablename` and may interpolate expressions similar to ES6
+
+  basic class declaration:
+
+```kotlin
+class Person(
+  val name: String,
+  val age: Int)
+```
+
+###### Properties
+
+Kotlin compiler exposes object properties to Java as `getPropName` and `setPropName`
+  - exception is for properties starting with `is`. eg: `somePerson.isMarried()` in java but `somePeron.isMarried` in Kotlin
+
