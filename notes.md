@@ -364,3 +364,11 @@ class Person(
 Kotlin compiler exposes object properties to Java as `getPropName` and `setPropName`
   - exception is for properties starting with `is`. eg: `somePerson.isMarried()` in java but `somePeron.isMarried` in Kotlin
 
+Custom accessors are the property name followed by a `get` function
+
+###### Imports, file structure 
+
+There is no distinction between importing classes or functions, much like JavaScript
+"star import" imports everything
+
+

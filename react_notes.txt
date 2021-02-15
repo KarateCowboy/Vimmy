@@ -1,0 +1,64 @@
+# Learning React from O'Reilly
+
+#####
+The two necessary libraries to build with React 
+-----
+React and ReactDOM
+#####
+The library for building React views
+-----
+React 
+#####
+The library which renders React views 
+-----
+ReactDOM 
+#####
+The DOM is made of DOM elements and the React DOM is made of...
+-----
+React elements 
+#####
+A React element is...
+-----
+A description of what the DOM should look like
+#####
+Static method to manually make a new React element:
+-----
+React.createElement
+#####
+If you console.log a React element then what do you see?
+-----
+An object literal
+#####
+The property on React element that tells react which kind of HTML or SVG element to create
+-----
+type
+#####
+Static method to display a React element on the page
+-----
+ReactDOM.render
+#####
+On which property does a React elements children dwell?
+-----
+on props.children
+#####
+React's alternative name for the HTML class property
+-----
+className
+#####
+The property on a React element that is used to uniquely identify it 
+----- 
+key
+##### 
+What it's called in React when you have two curly braces in JSX 
+-----
+A JavaScript expression
+#####
+Allows ReactDOM to render two base elements 
+-----
+React.Fragment
+#####
+Shorthand for React fragments 
+-----
+<> </>
+#####
+
