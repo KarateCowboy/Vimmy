@@ -40,5 +40,16 @@ as definitions
 Where does the Haskell `where` clause go?
 -----
 At the bottom
+=====
+A function with no name 
+-----
+nemo! jk. it's a lambda function 
+===== 
+IIFE means
+-----
+immediately invoked function expression
+=====
+
+
 
 
