@@ -1,0 +1,15 @@
+# *The Road to GraphQL*
+
+
+=====
+Four advantages of GraphQL over REST
+-----
+No over-fetching of data. Declarative data queries. No multiple requests. Single source of truth.
+=====
+The GraphQL of turning API definitions from multiple services into one for your own purposes
+-----
+Schema stitching
+=====
+Two disadvantages of GraphQL versus REST 
+-----
+Query complexity and complexity of caching
