@@ -14,5 +14,10 @@ const allMyCards = {
     [ "Are mixed type arrays allowed in Rescript?", "No. Only a tuple may do that."],
     [ "What is the closest Rescript type to a null value", "the None type"],
     [ "Are Rescript if statements expressions?", "yes, they are" ]
+  ],
+  "nixpkg concepts": [
+    [ "The four building blocks of Nix", "Nix store, derivations, sandboxing, and the Nix language" ],
+    ["The central location of all Nix packages in the system", "/nix/store" ],
+    ["The type of storage model closest to what the Nix Store uses", "A Graph Database" ]
   ]
 }
