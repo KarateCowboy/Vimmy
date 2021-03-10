@@ -63,5 +63,11 @@ module.exports.default = {
   "mongodb": [
     ["the default port on which the server runs", "27017"],
     ["exit the shell", "quit()"]
+  ],
+  "git" : [
+    "flag to amend a commit without editing the message", "--no-edit"]
+  ],
+  "react": [
+    ["The preferred component to redirect within a react application", "Use the Redirect imprort"]
   ]
 }
