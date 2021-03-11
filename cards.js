@@ -48,7 +48,12 @@ module.exports.default = {
     ["how to update immutable values?", "The spread operator with shadowing"],
     ["keyword to make a specific record field optionally mutable", "mutable"],
     ["main syntactic different between records and objects", "Object fields are strings in double quotes"],
-    [`Only way to access a field on an object`, `someObj["someKey"]`]
+    [`Only way to access a field on an object`, `someObj["someKey"]`],
+    ["What's a term for the data held by a type variant?","A payload"],
+    ["What two things does it mean for a value to be structurally typed?", " They 1) do not need any explicity type definition to be used as a value 2) are not couple to any specific module "],
+    [`What does the poly variant type convert to here:
+        let color = #Red
+      `, "A variable with the string value 'Red'"]
   ],
   "nixpkg concepts": [
     [ "The four building blocks of Nix", "Nix store, derivations, sandboxing, and the Nix language" ],
