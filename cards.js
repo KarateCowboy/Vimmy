@@ -1,4 +1,4 @@
-module.exports.default = {
+module.exports = {
   "rescript": [
     [ "multi-line comment", "slash and star" ],
     [ "value assignment", "let x = 5"],
@@ -35,7 +35,7 @@ module.exports.default = {
     ["The keyword to make two types mutually recursive", "and"],
     ["when to use single quotes for strings?", "you can't"],
     ["How do template strings differ from JavaScript?","No need to escape special characters"],
-    ["Tepmlate string which implicity converts a variable binding:","prefaced with j"],
+    ["Template string which implicity converts a variable binding:","prefaced with j"],
     ["What a char transpiles to in JS", "Its ascii integer value"],
     ["function to create a regex", "%re(string)"],
     [" what type of equal is == ", "structural equal"],
@@ -70,9 +70,15 @@ module.exports.default = {
     ["exit the shell", "quit()"]
   ],
   "git" : [
-    "flag to amend a commit without editing the message", "--no-edit"]
+    ["flag to amend a commit without editing the message", "--no-edit"]
   ],
   "react": [
     ["The preferred component to redirect within a react application", "Use the Redirect imprort"]
+  ],
+  "kubernetes": [
+    ["list secrets for kube config", "kubectl get secrets"]
+  ],
+  "nix": [
+
   ]
 }
